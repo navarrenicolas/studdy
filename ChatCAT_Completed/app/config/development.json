@@ -1,0 +1,28 @@
+{
+	"host": "http://localhost:3000",
+	"dbURI": "mongodb://studdy:pass@ds155674.mlab.com:55674/studdychat",
+	"sessionSecret": "catscanfly",
+	"fb": {
+		"clientID": "1938635459792912",
+		"clientSecret": "5cb598781dd616d7f01ce09addc30564",
+		"callbackURL": "//localhost:3000/auth/facebook/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"twitter": {
+		"consumerKey": "<twitter consumer key>",
+		"consumerSecret": "<twitter consumer secret key>",
+		"callbackURL": "//localhost:3000/auth/twitter/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"linkedin": {
+		"consumerKey": " 78589cjdmqqzsb",
+		"consumerSecret": "WwOLkxNhTUUv8h3n",
+		"callbackURL": "//localhost:3000/auth/linkedin/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"redis": {
+		"host": "127.0.0.1",
+		"port": 6379,
+		"password": ""
+	}
+}
