@@ -9,3 +9,15 @@ body {
 .top-margin {
     margin-top: 30px;
 }
+
+.top-margin2 {
+    margin-top: 20px;
+}
+
+.large-font {
+    font-size: 15pt;
+}
+
+.logo {
+    width: 400px;
+}
