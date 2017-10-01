@@ -70,10 +70,14 @@
     </div>
 
     <script type = "text/javascript">
-      $(document).ready(function( {
-        setTimeout(function() {
-          window.location.href = "/rooms";}, 7000);
-      }));
+      function loadPage() {
+          window.location.href = "/rooms"; 
+      }
+
+      function redirect() {
+        window.setTimeout(loadPage, 7000);
+      }
+      window.onload = redirect;
     </script>
 
        
