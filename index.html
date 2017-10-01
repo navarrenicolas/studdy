@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+    
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var availableTags = [
+                "Data Analysis With R | Udacity",
+                "Statistics with R | Udacity", "Applied Data Science with Python | Udacity", "Data Science | Udacity",
+                "Excel to MySQL: Analytic Techniques for Business | Udacity", "Big Data | Udacity",
+                "Data Analysis and Presentation Skills: the PwC Approach | Udacity", "Data Structures and Algorithms | Udacity",
+                "Business Analytics | Udacity", "Executive Data Science | Udacity", "Data Visualization with Tableau | Udacity",
+                "Geographic Information Systems (GIS) | Udacity", "Search Engine Optimization (SEO) | Udacity",
+                "Genomic Data Science | Udacity", "Data Warehousing for Business Intelligence | Udacity",
+                "Mastering Software Development in R | Udacity", "Data Analysis and Interpretation | Codecademy",
+                "Survey Data Collection and Analytics | Udacity", "Advanced Business Analytics | Udacity",
+                "Data Science at Scale | Udacity", "Foundations of Marketing Analytics | Udacity",
+                "Strategic Business Analytics | Udacity", "Structuring Machine Learning Projects | Udacity",
+                "Introduction to Data Science in Python | Udacity", "R Programming | Udacity",
+                "The Data Scientist\u00e2\u0080\u0099s Toolbox | Udacity", "Neural Networks for Machine Learning | Udacity",
+                "Python Data Structures | Udacity", "Introduction to Big Data | Udacity",
+                "Introduction to Probability and Data | Udacity", "Applied Machine Learning in Python | Udacity",
+                "Data-driven Decision Making | Udacity", "Data Science Math Skills | Udacity", "A Crash Course in Data Science | Udacity",
+                "Using Databases with Python | Udacity", "Problem Solving with Excel | Udacity",
+                "Business Metrics for Data-Driven Companies | Udacity",
+                "Applied Plotting, Charting & Data Representation in Python | Udacity",
+                "Managing Big Data with MySQL | Udacity", "Introduction to Data Analysis Using Excel | Codecademy",
+                "Fundamentals of Quantitative Modeling | Udacity", "Getting and Cleaning Data | Udacity", "Customer Analytics | Udacity",
+                "Mastering Data Analysis in Excel | Udacity", "Applied Text Mining in Python | Udacity",
+                "Hadoop Platform and Application Framework | Udacity",
+                "Data Visualization and Communication with Tableau | Udacity", "Practical Machine Learning | Udacity",
+                "Exploratory Data Analysis | Udacity", "Marketing Analytics | Codecademy",
+                "Capstone: Retrieving, Processing, and Visualizing Data with Python | Udacity",
+                "Database Management Essentials | Udacity", "Fundamentals of Visualization with Tableau | Udacity",
+                "Statistical Inference | Udacity", "Regression Models | Udacity", "Introduction to Search Engine Optimization | Udacity",
+                "Data Visualization with Advanced Excel | Udacity", "Introduction to Spreadsheets and Models | Udacity",
+                "Effective Business Presentations with Powerpoint | Udacity",
+                "Applied Social Network Analysis in Python | Udacity", "Inferential Statistics | Udacity",
+                "Big Data Modeling and Management Systems | Udacity", "The R Programming Environment | Udacity",
+                "Data Visualization | Udacity", "People Analytics | Udacity", "Bayesian Statistics | Udacity",
+                "Linear Regression and Modeling | Udacity", "Machine Learning: Clustering & Retrieval | Udacity",
+                "Google Cloud Platform Big Data and Machine Learning Fundamentals | Udacity", "Reproducible Research | Udacity",
+                "Data Processing Using Python | Udacity", "Data Management and Visualization | Udacity", "Operations Analytics | Udacity",
+                "Text Mining and Analytics | Udacity", "Big Data Integration and Processing | Udacity", "Accounting Analytics | Udacity",
+                "Data Management for Clinical Research | Udacity", "Developing Data Products | Udacity",
+                "Social and Economic Networks:  Models and Analysis | Udacity",
+                "Data Manipulation at Scale: Systems and Algorithms | Udacity",
+                "Introduction to Genomic Technologies | Udacity", "Introduction to Data Analytics for Business | Udacity",
+                "Modeling Risk and Realities | Udacity", "Managing Data Analysis | Udemy",
+                "Process Mining: Data science in Action | Udacity",
+                "Digital Analytics for Marketing Professionals: Marketing Analytics in Practice | Udacity",
+                "Forensic Accounting and Fraud Examination | Udacity", "Graph Analytics for Big Data | Udacity",
+                "Text Retrieval and Search Engines | Udacity", "Advanced R Programming | Udacity",
+                "Machine Learning for Data Analysis | Udacity", "Principles of fMRI 1 | Udacity",
+                "Qualitative Research Methods | Udacity", "Social Media Data Analytics | Udemy",
+                "Data Analytics for Lean Six Sigma | Udacity", "Essential Design Principles for Tableau | Udacity",
+                "Decision-Making and Scenarios | Udacity", "Visual Analytics with Tableau | Udacity",
+                "Building a Data Science Team | Udacity", "Julia Scientific Programming | Udacity",
+                "Data Warehouse Concepts, Design, and Data Integration | Udacity", "Data Science in Real Life | Udacity",
+                "Practical Predictive Analytics: Models and Methods | Udacity",
+                "Creating Dashboards and Storytelling with Tableau | Udacity", "Python for Genomic Data Science | Udacity",
+                "Data Analysis Tools | Udacity", "The Importance of Listening | Udacity", "Inferential Statistics | Udacity",
+                "Maps and the Geospatial Revolution | Udacity", "Cluster Analysis in Data Mining | Udacity",
+                "Basic Data Descriptors, Statistical Distributions, and Application to Business Decisions | Udacity",
+                "Introduction to Neurohacking In R | Udacity",
+                "Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform | Udacity",
+                "Pattern Discovery in Data Mining | Udacity",
+                "A developer's guide to Exploring and Visualizing IoT Data | Udacity",
+                "Hands-on Text Mining and Analytics | Udacity", "Foundations of strategic business analytics | Udacity",
+                "Regression Modeling in Practice | Udacity", "Data-driven Astronomy | Udacity",
+                "Framework for Data Collection and Analysis | Udacity",
+                "Business Intelligence Concepts, Tools, and Applications | Udacity", "Algorithms for DNA Sequencing | Udacity",
+                "A Crash Course in Causality:  Inferring Causal Effects from Observational Data | Udacity",
+                "Designing, Running, and Analyzing Experiments | Udacity", "Predictive Modeling and Analytics | Udacity",
+                "Linear Regression for Business Statistics | Udacity", "Command Line Tools for Genomic Data Science | Udacity",
+                "Business Analytics for Decision Making | Udacity", "Meaningful Marketing Insights | Udacity",
+                "Genomic Data Science with Galaxy | Udacity", "Functional Programming in Scala Capstone | Udacity",
+                "Digital Footprint | Udacity",
+                "Business Applications of Hypothesis Testing and Confidence Interval Estimation | Udacity",
+                "Building Resilient Streaming Systems on Google Cloud Platform | Udacity",
+                "Building Data Visualization Tools | Udacity", "Research Data Management and Sharing | Udacity",
+                "Relational Database Support for Data Warehouses | Udacity", "Bioconductor for Genomic Data Science | Udacity",
+                "Principles of fMRI 2 | Udacity", "Introduction to People Analytics | Udacity", "Building R Packages | Udacity",
+                "Understanding Your Data: Analytical Tools | Udacity",
+                "Case studies in business analytics with ACCENTURE | Udacity", "Data Science Capstone | Udacity",
+                "Interprofessional Healthcare Informatics | Udacity",
+                "Understanding China, 1700-2000: A Data Analytic Approach, Part 1 | Udemy",
+                "Dealing With Missing Data | Udacity", "Communicating Business Analytics Results | Udacity",
+                "Introduction to Formal Concept Analysis | Udacity", "Business Analytics and Digital Media | Udacity",
+                "Math behind Moneyball | Udacity", "Materials Data Sciences and Informatics | Udacity",
+                "Communicating Data Science Results | Udacity",
+                "Biological Diversity (Theories, Measures and Data sampling techniques) | Udacity",
+                "Executive Data Science Capstone | Udacity", "Combining and Analyzing Complex Data | Udacity",
+                "Social Science Approaches to the Study of Chinese Society Part 1 | Udacity",
+                "Geodesign: Change Your World | Udacity", "Wharton Business and Financial Modeling Capstone | Udacity",
+                "Business Statistics and Analysis Capstone | Udacity",
+                "Understanding China, 1700-2000: A Data Analytic Approach, Part 2 | Udacity",
+                "Big Data Science with the BD2K-LINCS Data Coordination and Integration Center | Udacity",
+                "Data Visualization with Tableau Project | Udacity",
+                "Social Science Approaches to the Study of Chinese Society Part 2 | Udacity",
+                "Statistics with R Capstone | Udacity",
+                "Increasing Real Estate Management Profits: Harnessing Data Analytics | Udemy",
+                "Business Analytics Capstone | Udacity", "Data Mining Project | Udacity",
+                "Data Science at Scale - Capstone Project | Udacity", "Capstone:  Create Value from Open Data | Udacity",
+                "Introduction to MongoDB | Udacity", "Big Data - Capstone Project | Udacity",
+                "Data Analysis and Presentation Skills: the PwC Approach Final Project | Udacity",
+                "Capstone: Analyzing (Social) Network Data | Udacity",
+                "Design and Build a Data Warehouse for Business Intelligence Implementation | Udacity",
+                "Data Analysis and Interpretation Capstone | Udacity", "Genomic Data Science Capstone | Udacity",
+                "Geospatial Analysis Project | Udacity", "Mastering Software Development in R Capstone | Udacity",
+                "Advanced Business Analytics Capstone | Udacity", "Introduction to Natural Language Processing"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags,
+                messages: {
+                    noResults: '',
+                    results: function () {}
+                },
+                select: function (event, ui) {
+                    window.location = "preferences.html"
+                }
 
+            });
+        });
+    </script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,53 +155,58 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="container-fluid">
 
         <div class="row">
             <div class="col-xs-3">
-            </div> 
+            </div>
             <div class="col-xs-6 text-center">
-                <img src="logo_trans.png" alt="wut" width="400px"> 
+                <img src="logo_trans.png" alt="wut" width="400px">
             </div>
             <div class="col-xs-3">
-            </div> 
+            </div>
         </div>
 
 
         <div class="row">
             <div class="col-xs-3">
-            </div> 
+            </div>
             <div class="col-xs-6 text-center">
                 <h4> find study groups for the most popular MOOCs </h4>
             </div>
             <div class="col-xs-3">
-            </div> 
+            </div>
         </div>
         <div class="row top-margin">
             <div class="col-xs-3">
-            </div> 
+            </div>
             <div class="col-xs-6 text-center">
-            <h3>1. Select Your Online Course</h3>
+                <h3>1. Select Your Online Course</h3>
             </div>
             <div class="col-xs-3">
-            </div> 
+            </div>
         </div>
 
-        <div class="row"> 
-            <div class="col-xs-3"> 
+        <div class="row">
+            <div class="col-xs-3">
             </div>
-            <div class="col-xs-6 text-center"> 
-                Search Bar Here
+            <div class="col-xs-6 text-center">
+                <div class="ui-widget">
+                    <label for="tags">Search: </label>
+                    <input id="tags">
+                </div>
             </div>
-            <div class="col-xs-3"> 
+            <div class="col-xs-3">
             </div>
         </div>
 
     </div>
-        
 
-  </body>
+
+</body>
+
 </html>
