@@ -9,8 +9,8 @@
 		"profileFields": ["id", "displayName", "photos"]
 	},
 	"twitter": {
-		"consumerKey": "<twitter consumer key>",
-		"consumerSecret": "<twitter consumer secret key>",
+		"consumerKey": "9T6dyZ3aEO2bBWeOxfGJ43rHz",
+		"consumerSecret": "P6KOA8WOFkatEhb22iagxvCCSiqp5THes2nwkXzjhJuBdrj6dy",
 		"callbackURL": "//localhost:3000/auth/twitter/callback",
 		"profileFields": ["id", "displayName", "photos"]
 	},
