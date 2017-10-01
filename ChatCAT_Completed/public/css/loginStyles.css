@@ -1,9 +1,7 @@
 /* login.html stylesheet */
 .container {
-	position:absolute;
 	width: 350px;
 	height: 210px;
-	border:1px solid black;
 	top:0;
 	bottom:0;
 	left:0;

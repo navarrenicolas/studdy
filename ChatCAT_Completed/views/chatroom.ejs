@@ -102,9 +102,17 @@
 </head>
 <body>
 	<div class="container">
-		<div class="titlePanel">
-			<h1>ChatCAT | <%= room %></h1>
-		</div>
+
+		<div class="row">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-6 text-center">
+                <img src="/img/logo_trans.png" alt="wut" width="400px">
+            </div>
+            <div class="col-xs-3">
+            </div>
+        </div>
+
 		<div class="controls">
 			<div class="userPicHolder"><img src="<%= user.profilePic %>" alt="<%= user.fullName %>"></div>
 			<p class="userName"><%= user.fullName %></p>
