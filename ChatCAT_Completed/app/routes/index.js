@@ -9,6 +9,15 @@ module.exports = () => {
 			'/': (req, res, next) => {
 				res.render('login');
 			},
+			'/courses': (req, res, next) => {
+				res.render('index');
+			},
+			'/loading': (req, res, next) => {
+				res.render('loadingScreen');
+			},
+			'/pref': (req, res, next) => {
+				res.render('preferences');
+			},
 			'/rooms': [h.isAuthenticated, (req, res, next) => {
 				res.render('rooms', {
 					user: req.user,
@@ -33,17 +42,17 @@ module.exports = () => {
 			}],
 			'/auth/facebook': passport.authenticate('facebook'),
 			'/auth/facebook/callback': passport.authenticate('facebook', {
-				successRedirect: '/rooms',
+				successRedirect: '/courses',
 				failureRedirect: '/'
 			}),
 			'/auth/twitter': passport.authenticate('twitter'),
 			'/auth/twitter/callback': passport.authenticate('twitter', {
-				successRedirect: '/rooms',
+				successRedirect: '/courses',
 				failureRedirect: '/'
 			}),
 			'/auth/linkedin': passport.authenticate('linkedin'),
 			'/auth/linkedin/callback': passport.authenticate('linkedin', {
-				successRedirect: '/rooms',
+				successRedirect: '/courses',
 				failureRedirect: '/'
 			}),
 			'/logout': (req, res, next) => {
